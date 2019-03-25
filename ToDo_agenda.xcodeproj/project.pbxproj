@@ -13,6 +13,12 @@
 		4D19A4DF22495159000B7645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D19A4DE22495159000B7645 /* Assets.xcassets */; };
 		4D19A4E222495159000B7645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D19A4E022495159000B7645 /* LaunchScreen.storyboard */; };
 		4D19A4ED2249515A000B7645 /* ToDo_agendaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D19A4EC2249515A000B7645 /* ToDo_agendaTests.swift */; };
+		4D19A4F92249518E000B7645 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D19A4F82249518E000B7645 /* CoreData.framework */; };
+		4D19A4FB224951E0000B7645 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D19A4FA224951E0000B7645 /* UIKit.framework */; };
+		4D19A4FE22495319000B7645 /* brainstorm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D19A4FD22495319000B7645 /* brainstorm.jpg */; };
+		4D19A500224953E0000B7645 /* clock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D19A4FF224953E0000B7645 /* clock.jpg */; };
+		4D19A50822495D96000B7645 /* to-do-list-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D19A50722495D96000B7645 /* to-do-list-2.png */; };
+		4D19A50C22495EA4000B7645 /* agenda.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D19A50B22495EA4000B7645 /* agenda.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		4D19A4E82249515A000B7645 /* ToDo_agendaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDo_agendaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D19A4EC2249515A000B7645 /* ToDo_agendaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo_agendaTests.swift; sourceTree = "<group>"; };
 		4D19A4EE2249515A000B7645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D19A4F82249518E000B7645 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4D19A4FA224951E0000B7645 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4D19A4FD22495319000B7645 /* brainstorm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brainstorm.jpg; sourceTree = "<group>"; };
+		4D19A4FF224953E0000B7645 /* clock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = clock.jpg; sourceTree = "<group>"; };
+		4D19A50722495D96000B7645 /* to-do-list-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "to-do-list-2.png"; sourceTree = "<group>"; };
+		4D19A50B22495EA4000B7645 /* agenda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agenda.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D19A4FB224951E0000B7645 /* UIKit.framework in Frameworks */,
+				4D19A4F92249518E000B7645 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +76,7 @@
 				4D19A4D622495154000B7645 /* ToDo_agenda */,
 				4D19A4EB2249515A000B7645 /* ToDo_agendaTests */,
 				4D19A4D522495154000B7645 /* Products */,
+				4D19A4F72249518D000B7645 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +92,7 @@
 		4D19A4D622495154000B7645 /* ToDo_agenda */ = {
 			isa = PBXGroup;
 			children = (
+				4D19A4FC22495271000B7645 /* Images */,
 				4D19A4D722495154000B7645 /* AppDelegate.swift */,
 				4D19A4D922495154000B7645 /* ViewController.swift */,
 				4D19A4DB22495154000B7645 /* Main.storyboard */,
@@ -94,6 +110,26 @@
 				4D19A4EE2249515A000B7645 /* Info.plist */,
 			);
 			path = ToDo_agendaTests;
+			sourceTree = "<group>";
+		};
+		4D19A4F72249518D000B7645 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D19A4FA224951E0000B7645 /* UIKit.framework */,
+				4D19A4F82249518E000B7645 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D19A4FC22495271000B7645 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4D19A4FF224953E0000B7645 /* clock.jpg */,
+				4D19A50722495D96000B7645 /* to-do-list-2.png */,
+				4D19A50B22495EA4000B7645 /* agenda.png */,
+				4D19A4FD22495319000B7645 /* brainstorm.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +213,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D19A50822495D96000B7645 /* to-do-list-2.png in Resources */,
+				4D19A50C22495EA4000B7645 /* agenda.png in Resources */,
 				4D19A4E222495159000B7645 /* LaunchScreen.storyboard in Resources */,
+				4D19A500224953E0000B7645 /* clock.jpg in Resources */,
 				4D19A4DF22495159000B7645 /* Assets.xcassets in Resources */,
+				4D19A4FE22495319000B7645 /* brainstorm.jpg in Resources */,
 				4D19A4DD22495154000B7645 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YD32F2GN7;
 				INFOPLIST_FILE = ToDo_agenda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2YD32F2GN7;
 				INFOPLIST_FILE = ToDo_agenda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
