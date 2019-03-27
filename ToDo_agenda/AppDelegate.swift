@@ -5,7 +5,7 @@
 //  Created by Jara De Prest on 25/03/2019.
 //  Copyright © 2019 iam.deprest. All rights reserved.
 //
-
+import CoreData
 import UIKit
 
 @UIApplicationMain
@@ -41,6 +41,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    lazy var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "NotesModel")
+        container.loadPersistentStores(completionHandler:{ (storeDescription, error) in
+        if let error = error as NSError? {
+            fatalError("ERROR ERROR WORLD ENDS HERE ERROR")
+            }
+        
+        })
 
+    return container
+    }()
+    
+    func saveContext(){
+        let context = persistentContainer.viewContext
+        if context.hasChanges{
+            do{
+                try context.save()
+            }catch{
+                _ = error as NSError
+                fatalError("ERROR ERROR WORLDS ENDS AGAIN ERROR")
+            }
+        }
+    }
 }
 

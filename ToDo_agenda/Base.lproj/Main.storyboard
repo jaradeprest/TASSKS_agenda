@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oWO-Ye-Avg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,13 +29,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sS-hw-Kh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1295" y="2"/>
+            <point key="canvasLocation" x="-2439" y="-171"/>
         </scene>
         <!--TASSKS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDo_agenda" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="NotesCollectionViewController" customModule="ToDo_agenda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UICollectionView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -49,25 +49,56 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FAC-dH-62k">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="FAC-dH-62k" customClass="NoteCollectionViewCell" customModule="ToDo_agenda" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS9-s3-uz3">
+                                                    <rect key="frame" x="38.5" y="14" width="73" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XTU-vU-Bfj">
+                                                    <rect key="frame" x="45" y="70" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="GEQ-1b-jXB"/>
+                                                        <constraint firstAttribute="width" constant="60" id="x0E-BD-0BV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date-Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-Qa-V1b">
+                                                    <rect key="frame" x="45" y="43" width="60" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="0.96482954379999997" blue="0.77558172179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="k8C-Co-Kme">
-                                        <rect key="frame" x="193" y="0.0" width="150" height="150"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <color key="backgroundColor" red="1" green="0.96482954379999997" blue="0.77558172179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="a7N-Qa-V1b" secondAttribute="trailing" constant="37" id="9Ag-eD-UzK"/>
+                                            <constraint firstItem="a7N-Qa-V1b" firstAttribute="leading" secondItem="FAC-dH-62k" secondAttribute="leadingMargin" constant="37" id="9dA-5q-eBN"/>
+                                            <constraint firstItem="XTU-vU-Bfj" firstAttribute="leading" secondItem="FAC-dH-62k" secondAttribute="leadingMargin" constant="37" id="A2O-Js-jkr"/>
+                                            <constraint firstItem="XTU-vU-Bfj" firstAttribute="top" secondItem="a7N-Qa-V1b" secondAttribute="bottom" constant="12" id="CvE-ND-SxN"/>
+                                            <constraint firstItem="MS9-s3-uz3" firstAttribute="top" secondItem="FAC-dH-62k" secondAttribute="topMargin" constant="6" id="FNW-SI-VdX"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="XTU-vU-Bfj" secondAttribute="trailing" constant="37" id="If5-1E-jed"/>
+                                            <constraint firstItem="a7N-Qa-V1b" firstAttribute="top" secondItem="MS9-s3-uz3" secondAttribute="bottom" constant="8" id="KeN-jR-g2b"/>
+                                            <constraint firstItem="MS9-s3-uz3" firstAttribute="centerX" secondItem="FAC-dH-62k" secondAttribute="centerX" id="XjF-Ed-moV"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="TaskIcon_iv" destination="XTU-vU-Bfj" id="XSV-0H-UCv"/>
+                                            <outlet property="TaskTime_Label" destination="a7N-Qa-V1b" id="7K6-r2-3m8"/>
+                                            <outlet property="TaskTitle_Label" destination="MS9-s3-uz3" id="S30-3e-Sj0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xhJ-yW-dul"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="M2Z-RL-iPu"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TASSKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtU-aQ-tWC">
                                 <rect key="frame" x="112.5" y="72" width="150" height="55"/>
@@ -90,15 +121,20 @@
                     <tabBarItem key="tabBarItem" title="TASSKS" image="to-do-list-2.png" largeContentSizeImage="todo.png" id="Ng2-FY-DMP"/>
                     <navigationItem key="navigationItem" id="ZGN-yf-N04">
                         <barButtonItem key="backBarButtonItem" title="All tasks" id="aV0-d5-jku"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="axz-6N-zbv">
+                            <connections>
+                                <action selector="btn_addTassk:" destination="BYZ-38-t0r" id="KtX-h3-htd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableview_tassks" destination="3gG-xD-hXt" id="2uC-k2-n70"/>
+                        <outlet property="cv_tassks" destination="3gG-xD-hXt" id="pRu-TK-cCi"/>
                         <segue destination="ewT-sA-9I0" kind="show" id="bf5-fl-DPV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="1"/>
+            <point key="canvasLocation" x="-436" y="0.44977511244377816"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MUB-JR-0UJ">
@@ -166,7 +202,7 @@
                         <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="9v5-gb-Fp1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="agenda_cell" id="9v5-gb-Fp1">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9v5-gb-Fp1" id="Gee-cn-scE">
@@ -224,24 +260,6 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.96482954379999997" blue="0.77558172179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="eA5-iE-44S">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eA5-iE-44S" id="aQx-4o-NXd">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.96482954379999997" blue="0.77558172179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="zYv-lg-wrX">
-                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zYv-lg-wrX" id="c24-iR-VxT">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.96482954379999997" blue="0.77558172179999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="TPG-Wu-g2N" id="gGj-qN-bn4"/>
@@ -293,8 +311,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="agenda.png" width="32" height="32"/>
-        <image name="to-do-list-2.png" width="30" height="30"/>
+        <image name="agenda.png" width="24" height="24"/>
+        <image name="to-do-list-2.png" width="24" height="24"/>
         <image name="todo.png" width="512" height="512"/>
     </resources>
 </document>
